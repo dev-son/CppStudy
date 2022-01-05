@@ -8,11 +8,13 @@ using namespace std;
 // 실제 코드가 당장 돌아가는 부분이라 인클루드를 막 해줘도 된다?
 int main()
 {
+	srand((unsigned int)time(nullptr));
 	Game game;
 	game.Init();
 
 	while (true)
 	{
+
 		game.Update();
 	}
 

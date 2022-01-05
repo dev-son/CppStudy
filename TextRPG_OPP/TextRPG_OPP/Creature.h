@@ -10,7 +10,7 @@ class Creature
 {
 public:
 	Creature(int creatureType)
-		:	_creatureType(creatureType), _hp(0), _attack(0), _defence(0)
+		: _creatureType(creatureType), _hp(0), _attack(0), _defence(0)
 	{
 
 	}
@@ -19,6 +19,12 @@ public:
 	{
 
 	}
+
+	// 순수 가상함수 무조건 반드시 사용해야함 상속 받는 애들은
+	virtual void PrintInfo() = 0;
+
+	void OnAttacked(Creature* attacker);
+	bool IsDead() { return _hp <= 0; }
 
 protected:
 	int _creatureType;

@@ -23,6 +23,7 @@ public:
 	{
 
 	}
+	virtual void PrintInfo();
 
 public:
 	int _playerType;
